@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-obsidian: #0a0807;
+  --color-espresso: #15100c;
+  --color-ivory: #faf7f2;
+  --color-sand: #f1ebe1;
+  --color-gold: #c9a461;
+  --color-gold-light: #e2c285;
+  --color-bronze: #8c6239;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #0a0807;
+    color: #f5f0e8;
+    overflow-x: clip;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle gold sweep animation for cinematic intro */
+@keyframes goldLightSweep {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #9e7b3b 0%,
+    #c9a461 30%,
+    #fff1cc 50%,
+    #c9a461 70%,
+    #8c6239 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldLightSweep 3.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* Subtle golden leather grain overlay */
+.leather-vignette {
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(201, 164, 97, 0.08) 0%,
+    rgba(21, 16, 12, 0.65) 55%,
+    rgba(10, 8, 7, 0.96) 100%
+  );
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .gold-shimmer-text {
+    animation: none;
+  }
+}

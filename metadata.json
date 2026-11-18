@@ -1,0 +1,6 @@
+{
+  "name": "VELLMONT — Luxury 3D Footwear Atelier",
+  "description": "Handcrafted Italian-grade leather dress shoes, architectural sneakers, and suede slippers with interactive 3D assembly, direct WhatsApp ordering, and an AI footwear concierge. Made by Ali Murtaza.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
